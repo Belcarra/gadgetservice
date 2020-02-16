@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+
+PKGDIR=debian/tmp
+package = gadgetservice
+
+%:
+	dh $@ --with systemd
+
+/etc:
+	cp -var ../files/etc gadgetservice/
+
+override_dh_installinit:
+	dh_systemd_enable -pgadgetservice --name=gadgetservice gadgetservice.service
+	dh_installinit -pgadgetservice 
+	dh_systemd_start -pgadgetservice --no-restart-on-upgrade
+	echo *************************
+	pwd
+	cp -var $(CURDIR)/files/etc debian/$(package)
+
+#override_dh_systemd_start:
+#	echo "Not running dh_systemd_start"

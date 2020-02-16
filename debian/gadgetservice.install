@@ -1,0 +1,2 @@
+init/gadget.start usr/lib/gadgetservice
+init/gadget.stop usr/lib/gadgetservice

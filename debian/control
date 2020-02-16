@@ -1,0 +1,18 @@
+Source: gadgetservice
+Section: admin
+Priority: extra
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: debhelper (>= 9), dh-systemd
+Standards-Version: 3.9.7
+Homepage: https://github.com/Ubuntu-Solutions-Engineering/openstack-deb
+Vcs-Browser: https://github.com/Ubuntu-Solutions-Engineering/openstack-deb
+Vcs-Git: https://github.com/Ubuntu-Solutions-Engineering/openstack-deb.git
+
+Package: gadgetservice
+Architecture: all
+Depends: ${misc:Depends}
+Description: Ubuntu OpenStack Installer
+ Ubuntu OpenStack Installer provides an extremely simple way to
+ install, deploy and scale an OpenStack cloud on top of Ubuntu server
+ and Juju. Deploy onto a single physical system using virtual machines
+ for testing, or use MAAS to deploy onto a cluster of any size.
